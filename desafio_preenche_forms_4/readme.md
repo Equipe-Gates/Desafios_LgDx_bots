@@ -60,3 +60,7 @@ Ao final do processo, o arquivo Excel estará atualizado com o status de cada fu
 Esse script automatiza o preenchimento de um formulário Google Forms com os dados dos funcionários extraídos de um arquivo Excel. A cada envio, o status de cada funcionário é atualizado para "Cadastrado". Esse processo permite que você faça um cadastro em massa de funcionários, além de gerar um relatório simples com o status de cada um.
 
 **Note:** Antes de rodar o script, teste-o em um ambiente de desenvolvimento para garantir que os campos do Google Forms estão sendo preenchidos corretamente.
+
+### Contribuições
+
+Se você deseja contribuir para este projeto, por favor, abra uma *issue* ou envie um *pull request* com suas sugestões e melhorias.
