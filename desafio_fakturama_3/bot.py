@@ -40,11 +40,7 @@ class Bot(DesktopBot):
 
     def carrega_json(self):
 
-        # Caminho local do arquivo json com os produtos
-        caminho_arquivo = "C:\\desafios_DX\\desafio_3\\resources\\produtos.json"
-
-        # Caminho do arquivo json com os produtos para orquestração
-        # caminho_arquivo = r"resources\\produtos.json"
+        caminho_arquivo = r"Desafios_LgDx_bots\\desafio_fakturama_3\\resources\\produtos.json"
 
         with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
             dados = json.load(arquivo)
@@ -54,7 +50,6 @@ class Bot(DesktopBot):
     def abre_fakturama(self):
 
         try:
-            
             self.execute(r"C:\\Program Files\\Fakturama2\\Fakturama.exe")
             self.wait(5000)
 
