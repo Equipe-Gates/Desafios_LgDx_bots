@@ -33,16 +33,10 @@ BotMaestroSDK.RAISE_NOT_CONNECTED = False
 
 from webdriver_manager.chrome import ChromeDriverManager
 
-import os
 
 import pandas as pd
 
 class Bot_teste(WebBot):
-
-    @classmethod
-    def diretorio_atual(cls):
-        diretorio_atual = os.getcwd()
-        return diretorio_atual
 
     def execution(self, execution=None):
         # Runner passes the server url, the id of the task being executed,
@@ -123,8 +117,8 @@ class Bot_teste(WebBot):
         self.find_element('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span', By.XPATH, waiting_time=10000).click()
 
     def lendo_excel(self):
-        diretorio = Bot_teste.diretorio_atual()
-        df = pd.read_excel(f'{diretorio}\\desafio_4\\resources\\DADOS_FUNCIONARIOS.xlsx', engine='openpyxl')
+        
+        df = pd.read_excel(r'Desafios_LgDx_bots\\desafio_preenche_forms_4\\resources\\DADOS_FUNCIONARIOS.xlsx', engine='openpyxl')
         
         for index, row in df.iterrows():
             
@@ -135,7 +129,7 @@ class Bot_teste(WebBot):
                 self.preenche_form(row)
 
                 df.at[index, 'STATUS'] = 'Cadastrado'
-                df.to_excel(f'{diretorio}\\desafio_4\\resources\\DADOS_FUNCIONARIOS.xlsx', index=False, engine='openpyxl')
+                df.to_excel(r'Desafios_LgDx_bots\\desafio_preenche_forms_4\\resources\\DADOS_FUNCIONARIOS.xlsx', index=False, engine='openpyxl')
                 self.wait(2000)
 
     def action(self):
